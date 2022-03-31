@@ -1,0 +1,17 @@
+<%- include('./partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/booking/main.css">
+<%- include('./partials/_navbar.ejs') %>
+
+<div class="container--booking">
+  <h1>Fazer uma reserva</h1>
+  <h2>Escolhe um cliente</h2>
+  <div class="container--clients">
+    <% data.clients.forEach((order, i) => { %>
+      <a href="/booking/<%= data.clients[i].id %>" class="booking--client">
+        <img src="<%= data.clients[i].logo %>">
+      </a>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('./partials/_footer.ejs') %>

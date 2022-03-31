@@ -1,0 +1,21 @@
+<%- include('./partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/booking/main.css">
+<%- include('./partials/_navbar.ejs') %>
+
+<div class="container--booking">
+  <h1>Fazer uma reserva</h1>
+  <h2>Escolhe um serviço</h2>
+  <div class="container--clients">
+    <% data.services.forEach((order, i) => { %>
+      <a href="/booking/<%= data.id_client %>/<%= data.services[i].id %>" class="booking--client--service">
+        <p class="book--client--name">
+          <%= data.services[i].name %>
+        </p>
+      </a>
+    <% }) %>
+  </div>
+
+  <a href="/" class="btn btn--round">Go back home</a>
+</div>
+
+<%- include('./partials/_footer.ejs') %>

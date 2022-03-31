@@ -1,0 +1,36 @@
+<%- include('../partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/auth/login.css">
+<%- include('../partials/_navbar.ejs') %>
+
+<div id="containerLogin" class="container--login" data-ejs="<%- JSON.stringify(data) %>">
+  <form method="post" id="authForm" class="<%= data.error.length && 'error--shadow' %>">
+    <h1 class="form--title">Login para parceiros</h1>
+    <% if (data.success.length) { %>
+    <div class="form--success" id="successEl">
+      <span><%= data.success %></span>
+    </div>
+    <% } %>
+    <% if (data.error.length) { %>
+    <div class="form--error">
+      <span><%= data.error %></span>
+    </div>
+    <% } %>
+    <div class="form--field">
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" type="email" name="email" value="">
+    </div>
+    <div class="form--field">
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" name="password" value="">
+    </div>
+    <input id="submitBtn" type="submit" name="submit" value="Login" class="btn btn--round">
+    <span class="form--info">
+      Login para utilizadores,
+      <a href="/auth" class="btn--text">clicar aqui!</a>
+    </span>
+  </form>
+  <a href="/" class="btn btn--round">Go back home</a>
+</div>
+
+<script src="scripts/auth/loginClients.js"></script>
+<%- include('../partials/_footer.ejs') %>

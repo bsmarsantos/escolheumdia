@@ -1,0 +1,35 @@
+<%- include('../partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/auth/login.css">
+<%- include('../partials/_navbar.ejs') %>
+
+<div id="containerLogin" class="container--login" data-ejs="<%- JSON.stringify(data) %>">
+  <form method="post" id="authForm" class="<%= data.error.length && 'error--shadow' %>">
+    <h1 class="form--title">Faz o teu registo</h1>
+      <div class="form--field">
+        <label for="signupName">Nome</label>
+        <input id="signupName" type="text" name="name" value="">
+      </div>
+      <div class="form--field">
+        <label for="signupEmail">Email</label>
+        <input id="signupEmail" type="email" name="email" value="">
+      </div>
+      <div class="form--field">
+        <label for="signupPassword">Password</label>
+        <input id="signupPassword" type="password" name="password" value="">
+      </div>
+      <div class="form--field__checkbox">
+        <input id="signupRGPD" type="checkbox" name="rgpd">
+        <label for="signupRGPD">RGPD - Termos e Condições</label>
+      </div>
+      <input id="submitBtn" type="submit" name="submit" value="Registar" class="btn btn--round">
+
+      <span class="form--info">
+        Já tens conta?
+        <a href="/auth" class="btn--text">Faz login aqui!</a>
+      </span>
+  </form>
+  <a href="/" class="btn btn--round">Go back home</a>
+</div>
+
+<script src="scripts/auth/login.js"></script>
+<%- include('../partials/_footer.ejs') %>

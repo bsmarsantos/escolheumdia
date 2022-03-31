@@ -1,0 +1,54 @@
+<div class="side--menu">
+  <ul>
+    <li class="<%= data.page === 'Profile' && 'active' %>">
+      <a href="/user">Meu perfil</a>
+    </li>
+
+    <!-- When user is a user -->
+    <% if (session.user.role === 'USER') { %>
+      <li class="<%= data.page === 'Cards' && 'active' %>">
+        <a href="/user/cards">Meus cartões</a>
+      </li>
+      <li class="<%= data.page === 'Bookings' && 'active' %>">
+        <a href="/user/bookings">Minhas reservas</a>
+      </li>
+      <li class="<%= data.page === 'Invoices' && 'active' %>">
+        <a href="/user/invoices">Minhas faturas</a>
+      </li>
+    <% } %>
+
+    <!-- When user is a client -->
+    <% if (session.user.role === 'CLIENT') { %>
+      <li class="<%= data.page === 'Staff' && 'active' %>">
+        <a href="/user/staff">Meus funcionários</a>
+      </li>
+      <li class="<%= data.page === 'Services' && 'active' %>">
+        <a href="/user/services">Meus serviços</a>
+      </li>
+      <li class="<%= data.page === 'Sdd' && 'active' %>">
+        <a href="/user/sdd">Métodos de pagamento</a>
+      </li>
+      <li class="<%= data.page === 'Bookings' && 'active' %>">
+        <a href="/user/bookings">Minhas reservas</a>
+      </li>
+      <li class="<%= data.page === 'Invoices' && 'active' %>">
+        <a href="/user/invoices">Minhas faturas</a>
+      </li>
+    <% } %>
+
+    <!-- When user is a admin -->
+    <% if (session.user.role === 'ADMIN') { %>
+      <li class="<%= data.page === 'Users' && 'active' %>">
+        <a href="/user/users">Meus utilizadores</a>
+      </li>
+      <li class="<%= data.page === 'Clients' && 'active' %>">
+        <a href="/user/clients">Meus clientes</a>
+      </li>
+    <% } %>
+  </ul>
+
+  <div>
+    <a href="/" class="btn btn--round">Go back home</a>
+    <a href="/" class="btn btn--round btn--danger">Log out</a>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+form {
+  padding: 4rem 5rem;
+  min-width: 30rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 2rem;
+}
+
+.error--shadow {
+  box-shadow: rgba(240, 128, 128, 0.8) 0px 3px 8px;
+}
+
+form input[type="submit"] {
+  margin-top: 2rem;
+}
+
+.form--field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form--title {
+  margin-bottom: 1rem;
+}
+
+.form--error,
+.form--success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--title-font);
+  border-radius: 15px;
+}
+
+.form--error {
+  background-color: var(--error-color);
+  color: #fafafa;
+}
+
+.form--success {
+  background-color: var(--success-color);
+}
+
+/* LABELS */
+.form--field label {
+  font-size: 1.2rem;
+}
+
+.form--field__checkbox label {
+  font-size: 1.2rem;
+  padding-top: 0.2rem;
+}
+
+/* INPUTS */
+.form--field input {
+  margin: 1rem 0;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: -webkit-fill-available;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgb(84 105 212 / 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+.form--field__checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form--field__checkbox input {
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+  box-shadow: unset;
+  min-height: unset;
+}
+
+form .form--twoColumns,
+form .form--threeColumns{
+  display: flex;
+  justify-content: space-between;
+}
+
+form .form--twoColumns .form--field {
+  width: 45%;
+}
+
+form .form--threeColumns .form--field {
+  width: 30%;
+}

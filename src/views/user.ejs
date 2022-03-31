@@ -1,0 +1,44 @@
+<%- include('./partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/user/main.css">
+<%- include('./partials/_navbar.ejs') %>
+
+<div class="container--user">
+  <%- include('./partials/_sideMenu.ejs') %>
+
+  <div class="main--content">
+    <% switch (data.page) {
+      case 'Profile': %>
+        <%- include('./partials/user/_profile.ejs') %>
+        <% break; %>
+      <% case 'Cards': %>
+        <%- include('./partials/user/_card.ejs') %>
+        <% break; %>
+      <% case 'Invoices': %>
+      <%- include('./partials/user/_invoices.ejs') %>
+        <% break; %>
+      <% case 'Staff': %>
+        <%- include('./partials/user/_staff.ejs') %>
+        <% break; %>
+      <% case 'Services': %>
+       <%- include('./partials/user/_services.ejs') %>
+        <% break; %>
+      <% case 'Sdd': %>
+        <%- include('./partials/user/_sdd.ejs') %>
+        <% break; %>
+      <% case 'Users': %>
+      <%- include('./partials/user/_users.ejs') %>
+        <% break; %>
+      <% case 'Clients': %>
+      <%- include('./partials/user/_clients.ejs') %>
+        <% break; %>
+      <% case 'Bookings': %>
+        <%- include('./partials/user/_bookings.ejs') %>
+        <% break; %>
+      <% default: %>
+        <%- include('./partials/user/_profile.ejs') %>
+    <% } %>
+  </div>
+</div>
+
+<script src="scripts/user/main.js"></script>
+<%- include('./partials/_footer.ejs') %>

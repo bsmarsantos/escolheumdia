@@ -1,0 +1,36 @@
+.container--bookings .header--bookings {
+  padding-bottom: 3rem;
+}
+
+
+/* FIRST COLUMN */
+.container--bookings table tr td:first-child {
+  text-align: center;
+}
+
+/* SECOND COLUMN */
+.container--bookings table tr td:nth-child(2) {
+  padding-left: 1rem;
+}
+
+/* THIRD COLUMN */
+.container--bookings table tr td:nth-child(3) {
+  padding-left: 1rem;
+}
+
+/* FOURTH COLUMN */
+.container--bookings table tr td:nth-child(4) {
+  padding-left: 1rem;
+}
+
+/* FIFTH COLUMN */
+.container--bookings table tr td:nth-child(5) {
+  padding-left: 1rem;
+}
+
+/* LAST COLUMN */
+.container--bookings table tr td:nth-last-child(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

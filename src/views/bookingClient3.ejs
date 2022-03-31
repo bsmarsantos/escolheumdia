@@ -1,0 +1,25 @@
+<%- include('./partials/_header.ejs') %>
+<link rel="stylesheet" href="styles/booking/main.css">
+<%- include('./partials/_navbar.ejs') %>
+
+<div class="container--booking">
+  <h1>Fazer uma reserva</h1>
+
+  <h2>Escolhe uma data</h2>
+
+  <div class="booking--calendar">
+		<input type="hidden" id="id_Client" name="id_Client" value="<%= data.id_client %>">
+		<input type="hidden" id="id_Service" name="id_Service" value="<%= data.id_service %>">
+		<input type="hidden" id="id_Staff" name="id_Staff" value="<%= data.id_staff %>">
+
+    <label for="reservationDate">Birthday (date and time):</label>
+    <input type="datetime-local" id="reservationDate" name="birthdaytime">
+  </div>
+
+  <a class="btn btn--round" onclick="handleSubmit()">Reservar</a>
+
+  <a href="/" class="btn btn--round">Go back home</a>
+</div>
+
+<script src="scripts/booking/main.js"></script>
+<%- include('./partials/_footer.ejs') %>

@@ -1,0 +1,23 @@
+/* FIRST COLUMN */
+.container--staff table tr td:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECOND COLUMN */
+.container--staff table tr td:nth-child(2) {
+  text-align: center;
+}
+
+/* THIRD COLUMN */
+.container--staff table tr td:nth-child(3) {
+  padding-left: 1rem;
+}
+
+/* LAST COLUMN */
+.container--staff table tr td:nth-last-child(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

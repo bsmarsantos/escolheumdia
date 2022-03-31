@@ -1,0 +1,54 @@
+.container--clients .header--clients {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+/* FIRST COLUMN */
+.container--clients table tr td:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECOND COLUMN */
+.container--clients table tr td:nth-child(2) {
+  text-align: center;
+}
+
+/* THIRD COLUMN */
+.container--clients table tr td:nth-child(3) {
+  padding-left: 1rem;
+}
+
+/* FOURTH COLUMN */
+.container--clients table tr td:nth-child(4) {
+  padding-left: 1rem;
+}
+
+/* FIFTH COLUMN */
+.container--clients table tr td:nth-child(5) {
+  padding-left: 1rem;
+}
+
+/* SIXTH COLUMN */
+.container--clients table tr td:nth-child(6) {
+  padding-left: 1rem;
+}
+
+/* SEVENTH COLUMN */
+.container--clients table tr td:nth-child(7) {
+  padding-left: 1rem;
+}
+
+/* EIGHTH COLUMN */
+.container--clients table tr td:nth-child(8) {
+  padding-left: 1rem;
+}
+
+/* LAST COLUMN */
+.container--clients table tr td:nth-last-child(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

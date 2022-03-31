@@ -1,0 +1,35 @@
+nav {
+	grid-area: navbar;
+
+	display: flex;
+	justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+nav .nav--left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .nav--left img {
+  width: 68px;
+  height: auto;
+}
+
+nav .nav--left span {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+nav .nav--right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .nav--right div {
+	margin-right: 2rem;
+}

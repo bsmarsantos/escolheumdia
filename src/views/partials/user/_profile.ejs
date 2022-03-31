@@ -1,0 +1,28 @@
+<form action="" method="post" id="authForm" class="<%= data.error.length && 'error--shadow' %>">
+  <h1 class="form--title">Meu Perfil</h1>
+  <% if (data.error.length) { %>
+  <div class="form--error">
+    <span><%= data.error %></span>
+  </div>
+  <% } %>
+  <div class="form--field">
+    <label for="userName">Nome</label>
+    <input id="userName" type="text" name="name" value="<%= session.user.name %>">
+  </div>
+  <div class="form--field">
+    <label for="userEmail">Email</label>
+    <input id="userEmail" type="email" name="email" value="<%= session.user.email %>">
+  </div>
+  <div class="form--field">
+    <label for="userPassword">Nova Password</label>
+    <input id="userPassword" type="password" name="password" value="">
+  </div>
+  <div class="form--field__checkbox">
+    <input id="userRGPD" type="checkbox" name="rgpd" <%= session.user.rgpd && 'checked' %>>
+    <label for="userRGPD">RGPD - Termos e Condições</label>
+  </div>
+  <input type="submit" name="submit" value="Gravar" class="btn btn--round btn-small btn--end">
+  <span class="form--info">
+    A alteração dos dados é irreversível!
+  </span>
+</form>

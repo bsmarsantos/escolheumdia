@@ -1,0 +1,31 @@
+.container--user {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: .8fr repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "sideMenu mainContent mainContent"
+    "sideMenu mainContent mainContent"
+    "sideMenu mainContent mainContent";
+}
+
+.main--content {
+  grid-area: mainContent;
+  padding-top: 5rem;
+}
+
+@media only screen and (max-width: 978px) {
+  .main--content {
+    padding: 0;
+  }
+}
+
+.container--user .header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.container--user .header svg {
+  cursor: pointer;
+}

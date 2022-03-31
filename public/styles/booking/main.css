@@ -1,0 +1,81 @@
+.container--booking {
+  grid-area: main;
+}
+
+.container--booking h1 {
+  margin: 4rem 0;
+  font-family: var(--title-font);
+}
+
+.container--booking h2 {
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+.container--booking .container--clients{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 18%);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 978px) {
+  .container--booking .container--clients {
+    grid-template-columns: repeat(auto-fill, 30%);
+  }
+}
+
+@media only screen and (max-width: 572px) {
+  .container--booking .container--clients {
+    grid-template-columns: repeat(auto-fill, 45%);
+  }
+}
+
+.container--booking .container--clients .booking--client,
+.container--booking .container--clients .booking--client--service,
+.container--booking .container--clients .booking--client--staff {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: auto;
+}
+
+.container--booking .container--clients .booking--client img {
+  width: 100%;
+  height: auto;
+}
+
+.booking--client--service,
+.booking--client--staff {
+  padding: 2rem;
+}
+
+.booking--client--service .book--client--name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.booking--client--service .book--client--duration {
+  font-size: 1.4rem;
+}
+
+.booking--client--service .book--client--price {
+  font-size: 1.4rem;
+  text-align: end;
+}
+
+.booking--client--staff {
+  display: flex;
+}
+
+.booking--client--staff .book--staff--name{
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.booking--calendar {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}

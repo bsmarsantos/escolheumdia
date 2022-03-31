@@ -1,0 +1,15 @@
+.container--login {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container--login form {
+  margin-bottom: 2rem;
+}
+
+form > span {
+  margin-top: 2rem;
+}

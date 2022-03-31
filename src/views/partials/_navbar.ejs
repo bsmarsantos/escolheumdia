@@ -1,0 +1,32 @@
+<nav>
+  <div class="nav--left">
+    <a href="/">
+      <img src="/images/logo_black_color.png" alt="Logo">
+    </a>
+    <span>escolhe um dia</span>
+  </div>
+  <div class="nav--right">
+    <% if (data.page !== 'Login') { // If page is login it should not show login button %>
+      <% if (session.user) { // User is logged in %>
+        <div class="dropdown">
+          <span>
+            Olá <%= session.user.name %>
+            <i class="fas fa-chevron-circle-down"></i>
+          </span>
+          <div class="dropdown--content">
+            <a href="/user">
+              Ver perfil
+            </a>
+          </div>
+        </div>
+        <a href="/auth/logout" class="btn btn--round">
+          Log out
+        </a>
+      <% } else { // user is not logged in%>
+        <a href="/auth" class="btn btn--round">
+          Login / Sign Up
+        </a>
+      <% } %>
+    <% } %>
+  </div>
+</nav>

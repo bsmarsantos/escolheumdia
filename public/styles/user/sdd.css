@@ -1,0 +1,24 @@
+.container--sdd .header--sdd {
+  padding-bottom: 3rem;
+}
+
+
+/* FIRST COLUMN */
+.container--sdd table tr td:first-child {
+  text-align: center;
+}
+
+/* SECOND COLUMN */
+.container--sdd table tr td:nth-child(2) {
+  padding-left: 1rem;
+}
+
+/* THIRD COLUMN */
+.container--sdd table tr td:nth-child(3) {
+  padding-left: 1rem;
+}
+
+/* FOURTH COLUMN */
+.container--sdd table tr td:nth-child(4) {
+  padding-left: 1rem;
+}
